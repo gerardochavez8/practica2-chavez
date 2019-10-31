@@ -35,7 +35,7 @@
 							<td>{{ persona.id }}</td>
 							<td>{{ persona.nombre }}</td>
 							<td>{{ persona.direccion }}</td>
-							<td>{{ persona.tedefono }}</td>
+							<td>{{ persona.telefono }}</td>
 							<td>
 								<button class="btn btn-primary btn-sm" ng-click="view(persona.id)"><i
 										class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button> &nbsp;

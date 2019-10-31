@@ -5,3 +5,5 @@ CREATE TABLE `datos` (
   `fechaCreacion` timestamp NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+ADD COLUMN telefono VARCHAR(15) AFTER direccion;
