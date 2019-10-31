@@ -3,8 +3,6 @@ angular.module('app', [])
 	{
 		var event; 
 		var id;
-		//var rutA=<?php echo $url;?>;
-		
 		$http.get('./angular.php?index=1').then(function (res)
 		{	
 			$scope.personas = res.data;
@@ -24,7 +22,6 @@ angular.module('app', [])
 		{
 			event = false;
 			id = $id;
-			//console.log($id);
 			$('#title').text("Detalles persona");
 			$("#contentModal").modal("show");
 			$('#personaId').show();
@@ -33,9 +30,6 @@ angular.module('app', [])
 					$scope.persona = res.data;
 					console.log(res.data);
 				 })
-				/*.catch(function(response) {
-  					console.error('Persona error', response.status, response.data);
-				});*/
 		};
 
 		$scope.add = function() {
@@ -49,10 +43,12 @@ angular.module('app', [])
 		$scope.create = function () 
 		{
 			var data=$scope.persona;
+			console.log(data)
 			$http.post('./create.php?index=1', data)
 				.then(function(res) {
 					console.log("Create:");
 					console.log(res.data);
+					alert('HELLO');
 					location.reload();
 				});
 		};

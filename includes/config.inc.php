@@ -1,6 +1,6 @@
 <?php
 //Definición de variable global
-$url="https://gerardo-manuel-chavez-larios-1.paiza-user.cloud/~ubuntu/practica2-chavez/";
+$url="https://practica2-chavez.paiza-user.cloud/~ubuntu/practica2-chavez/";
 
 //Definir el código de caracteres
 header('Content-Type: text/html; charset=utf-8');
