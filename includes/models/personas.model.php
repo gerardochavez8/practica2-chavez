@@ -5,6 +5,7 @@ class Personas {
 	public $id;
 	public $nombre;
 	public $direccion;
+	public $telefono;
 	public $fechaCreacion;
 
 	public static function getBySql($sql) {
@@ -58,20 +59,20 @@ class Personas {
 	}
 
 	public static function getInfoUpdate($id) {
-		$sql = "SELECT id, nombre, direccion from datos where id = " . $id;
+		$sql = "SELECT id, nombre, direccion, telefono from datos where id = " . $id;
 
 		$database = new Database();
 		$statement = $database->stmt_init();
 
 		if ($statement->prepare($sql)) {
 			$statement->execute();
-			$statement->bind_result($id, $nombre, $direccion);
+			$statement->bind_result($id, $nombre, $direccion, $telefono);
 			$statement->fetch();
 			$statement->close();
 		}
 		$database->close();
 
-		$object = (object) array('idPersona' => $id, 'nombre' => $nombre, 'direccion' => $direccion);
+		$object = (object) array('idPersona' => $id, 'nombre' => $nombre, 'direccion' => $direccion, 'telefono' => $telefono);
 		return $object;
 	}
 
@@ -99,7 +100,7 @@ class Personas {
 			$statement->execute();
 
 			// Bind variable to prepared statement
-			$statement->bind_result($id, $nombre, $direccion, $fechaCreacion);
+			$statement->bind_result($id, $nombre, $direccion, $fechaCreacion, $telefono);
 
 			// Populate bind variables
 			$statement->fetch();
@@ -126,7 +127,7 @@ class Personas {
 		$affected_rows = FALSE;
 
 		// Build database query
-		$sql = "insert into datos (nombre, direccion) values (?, ?)";
+		$sql = "insert into datos (nombre, direccion, telefono) values (?, ?, ?)";
 
 		// Open database connection
 		$database = new Database();

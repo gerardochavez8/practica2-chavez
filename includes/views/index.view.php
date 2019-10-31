@@ -59,7 +59,7 @@
 									<div class="form-group row">
 										<div id="personaId" class="col-md-3">
 											<label>Id Persona</label>
-											<input ng-model="persona.idPersona" class="form-control" disabled>
+											<input ng-model="persona.id" class="form-control" disabled>
 										</div>
 										<div class="col-md-7">
 											<label>Nombre</label>
@@ -72,13 +72,13 @@
 											<input ng-model="persona.direccion" class="form-control" required>
 										</div>
 										<div class="col-md-7">
-											<label>Tedefono</label>
-											<input ng-model="persona.tedefono" class="form-control" required>
+											<label>Telefono</label>
+											<input ng-model="persona.telefono" class="form-control" required>
 										</div>
 									</div>
 								</div>
 								<div class="modal-footer">
-									<button type="submit" class="btn btn-primary">
+									<button type="submit" class="btn btn-primary" ng-click="update(persona.id)">
 										<span class="glyphicon glyphicon-floppy-disk"></span> Guardar
 									</button>
 									<button class="btn btn-secondary" data-dismiss="modal">
