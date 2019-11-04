@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/gerardochavez8/practica2-chavez/issues"
   },
-  "homepage": "https://github.com/gerardochavez8/practica2-chavez#readme"
+  "homepage": "https://github.com/gerardochavez8/practica2-chavez#readme",
+  "devDependencies": {
+    "cypress": "^3.6.0"
+  }
 }
