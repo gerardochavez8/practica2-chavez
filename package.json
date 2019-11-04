@@ -1,0 +1,25 @@
+{
+  "name": "practica2-chavez",
+  "version": "1.0.0",
+  "description": "practica2 directorio personas",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerardochavez8/practica2-chavez.git"
+  },
+  "keywords": [
+    "php"
+  ],
+  "author": "Gerardo Manuel Chávez Larios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gerardochavez8/practica2-chavez/issues"
+  },
+  "homepage": "https://github.com/gerardochavez8/practica2-chavez#readme",
+  "devDependencies": {
+    "cypress": "^3.6.0"
+  }
+}
