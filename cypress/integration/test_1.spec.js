@@ -22,7 +22,7 @@ describe(title, () => {
         cy.get('#btn-add-submit').click()
     });
     
-    it('Revisar "Télefono" en el formulario agregar', () => {
+    it('Revisar "Télefono" en el formulario editar', () => {
         // Abriendo modal
         cy.get('#btn-update').click();
 
@@ -34,4 +34,8 @@ describe(title, () => {
         // Submit
         cy.get('#btn-cancel-submit').click()
     });
+
+    it('Eliminar un registro', () => {
+        cy.get('#btn-delete').click();
+    })
 });
